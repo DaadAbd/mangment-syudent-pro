@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Dashboard</title>
+    <link rel="stylesheet" href="five.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Supervisor Dashboard</h2>
+            <button class="sidebar-button" id="chat">Chat</button>
+            <button class="sidebar-button" id="students">Students</button>
+            <button class="sidebar-button" id="files">Upload Files</button>
+            <button class="sidebar-button" id="notes">Notes</button>
+            <button class="sidebar-button" id="addProject">Add Project</button>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div id="projectContainer">
+                <h3>Projects Supervised</h3>
+                <div class="projects-grid">
+                    <!-- Project Template -->
+                    <div class="project-details">
+                        <h4>AI Research</h4>
+                        <p><b>Students:</b> John, Alice, Bob</p>
+                        <p><b>Type:</b> Graduation Project 1</p>
+                    </div>
+                    <div class="project-details">
+                        <h4>Web Development</h4>
+                        <p><b>Students:</b> Sarah, Alex</p>
+                        <p><b>Type:</b> Semester Project</p>
+                    </div>
+                    <div class="project-details">
+                        <h4>Robotics</h4>
+                        <p><b>Students:</b> Sam, Lily</p>
+                        <p><b>Type:</b> Graduation Project 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Chat -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <h3>Chat</h3>
+            <div class="chat-box">
+                <div class="message received">Hello! How can I help you today?</div>
+                <div class="message sent">Hi, I need some guidance on my project.</div>
+                <div class="message received">Sure! What part of the project do you need help with?</div>
+            </div>
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <button id="sendChat">Send</button>
+            <button class="close-button">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Students -->
+    <div id="studentsModal" class="modal">
+        <div class="modal-content">
+            <h3>Students Supervised</h3>
+            <ul id="studentList">
+                <li>John</li>
+                <li>Alice</li>
+                <li>Bob</li>
+                <li>Sarah</li>
+                <li>Alex</li>
+            </ul>
+            <button class="close-button">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Upload Files -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <h3>Upload Files</h3>
+            <input type="file" id="fileInput">
+            <button class="close-button">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Add Project -->
+    <div id="addProjectModal" class="modal">
+        <div class="modal-content">
+            <h3>Add New Project</h3>
+            <form id="addProjectForm">
+                <label for="supervisorName">Supervisor Name:</label>
+                <input type="text" id="supervisorName" placeholder="Enter your name">
+                
+                <label for="projectType">Project Type:</label>
+                <select id="projectType">
+                    <option value="semester">Semester Project</option>
+                    <option value="graduation1">Graduation Project 1</option>
+                    <option value="graduation2">Graduation Project 2</option>
+                </select>
+                
+                <label for="specialization">Specialization:</label>
+                <select id="specialization">
+                    <option value="ai">AI</option>
+                    <option value="software">Software</option>
+                    <option value="communications">Communications</option>
+                </select>
+                
+                <label for="projectDescription">Project Description:</label>
+                <textarea id="projectDescription" placeholder="Enter a brief description"></textarea>
+                
+                <div>
+                    <button type="submit" id="submitProject">Submit</button>
+                    <button type="button" id="cancelProject">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="six.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project List</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Projects</h1>
+      <button id="filter-button">Filter Projects</button>
+    </header>
+    <main>
+      <div id="projects-grid">
+        <!-- Projects will be dynamically loaded -->
+      </div>
+    </main>
+    <button id="add-project-button" onclick="showProposalForm()">Propose New Project</button>
+    
+    <!-- Modal for proposing a new project -->
+    <div id="proposal-modal" class="hidden">
+      <div class="modal-content">
+        <h2>Propose a New Project</h2>
+        <form id="proposal-form">
+          <label for="supervisor">Supervisor Name</label>
+          <input type="text" id="supervisor" required>
+          
+          <label for="project-type">Project Type</label>
+          <select id="project-type" required>
+            <option value="Semester Project">Semester Project</option>
+            <option value="First Graduation">First Graduation</option>
+            <option value="Second Graduation">Second Graduation</option>
+          </select>
+          
+          <label for="specialization">Specialization</label>
+          <input type="text" id="specialization" required>
+          
+          <label for="description">Project Description</label>
+          <textarea id="description" required></textarea>
+          
+          <div class="form-buttons">
+            <button type="submit" class="btn propose-btn">Submit</button>
+            <button type="button" class="btn" onclick="closeProposalForm()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

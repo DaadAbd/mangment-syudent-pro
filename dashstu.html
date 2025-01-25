@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="three.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Student Dashboard</h2>
+            <button class="sidebar-button" id="chat">Chat</button>
+            <button class="sidebar-button" id="friends">Friends</button>
+            <button class="sidebar-button" id="files">Upload Files</button>
+            <button class="sidebar-button" id="notes">Notes</button>
+            <button class="sidebar-button" id="follow">Follow-ups</button>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div id="projectContainer" style="display: block;background: radial-gradient(#123c73, transparent);">
+                <h3>Current Project</h3>
+                <div class="project-details" id="projectDetails">
+                    <p>The details of the project chosen by the student will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Friends -->
+    <div id="friendsModal" class="modal">
+        <div class="modal-content">
+            <h3>Enter Friend's Username</h3>
+            <input type="text" id="friendName" placeholder="Enter username">
+            <button id="sendRequest">Send Request</button>
+            <button id="closeFriendsModal">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Upload Files -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <h3>Upload File</h3>
+            <input type="file" id="fileInput">
+            <button id="uploadFile">Upload</button>
+            <button id="closeUploadModal">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Follow-ups -->
+    <div id="followModal" class="modal">
+        <div class="modal-content">
+            <h3>Project Progress</h3>
+            <div id="progressChart">
+                <progress value="60" max="100"></progress>
+            </div>
+            <button id="closeFollowModal">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Chat -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <h3>Chat</h3>
+            <div id="chatMessages">
+                <p class="bot-message">Hello! How can I assist you today?</p>
+            </div>
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendChatMessage">Send</button>
+            <button id="closeChatModal">Close</button>
+        </div>
+    </div>
+
+    <script src="four.js"></script>
+</body>
+</html>

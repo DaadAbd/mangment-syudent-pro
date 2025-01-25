@@ -1,0 +1,198 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#a09990 ;
+}
+
+/* Dashboard container */
+.dashboard {
+    display: flex;
+    background-color: #a09990;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 20%;
+    background-color: #0b2240; /* Navy blue */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-button {
+    background-color: #a09990;
+    color: white;; /* White */
+    color: #002f6c; /* Navy blue */
+    border: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, box-shadow 0.3s ease;
+}
+
+.sidebar-button:hover {
+    background-color: #ddd; /* Light gray */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #a09990;
+    color: white;;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projectContainer {
+    text-align: center;
+}
+
+.project-details {
+  
+    background-color: #0b2240;
+
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #c2bbb9;
+}
+
+/* Modals */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+/* Modal content common styles */
+.modal-content {
+    background-color: #0b2240; /* Navy blue */
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    height: auto;
+    max-height: 80%;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Heading */
+.modal-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input and button styles */
+input[type="text"], input[type="file"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+button {
+    background-color: #f5f5dc; /* Beige color */
+    color: #002f6c; /* Navy blue */
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+    margin-top: 15px;
+    width: 120px;
+    height: 45px;
+}
+
+button:hover {
+    background-color: #ddd; /* Light gray */
+    transform: scale(1.05);
+}
+
+/* Modal close button */
+#closeModalButton {
+    background-color: #ff4c4c;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#closeModalButton:hover {
+    background-color: #e63946;
+}
+
+/* Modal inputs and file upload */
+input[type="file"] {
+    font-size: 16px;
+}
+
+/* Friends Modal */
+#friendsModal input {
+    width: 70%;
+}
+
+#friendsModal .modal-content {
+    height: auto;
+    max-height: 60%;
+}
+
+/* Upload Modal */
+#uploadModal input {
+    font-size: 16px;
+}
+
+#uploadModal .modal-content {
+    height: auto;
+    max-height: 60%;
+}
+
+/* Follow Modal */
+#followModal .modal-content {
+    height: auto;
+    max-height: 60%;
+}
+
+progress {
+    width: 100%;
+    height: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
